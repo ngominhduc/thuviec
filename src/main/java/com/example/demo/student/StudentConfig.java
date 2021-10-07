@@ -18,7 +18,7 @@ public class StudentConfig {
                     1L,
                     "ngo",
                     30,
-                    LocalDate.of(2021, Month.JULY, 5),
+                    LocalDate.of(2021, Month.JULY, 15),
                     "ngo@gmail.com"
             );
 
@@ -26,7 +26,7 @@ public class StudentConfig {
                     2L,
                     "minh",
                     30,
-                    LocalDate.of(2021, Month.JULY, 5),
+                    LocalDate.of(2021, Month.JULY, 15),
                     "minh@gmail.com"
             );
 
@@ -34,7 +34,7 @@ public class StudentConfig {
                     3L,
                     "duc",
                     30,
-                    LocalDate.of(2021, Month.JULY, 5),
+                    LocalDate.of(2021, Month.JULY, 15),
                     "duc@gmail.com"
             );
 

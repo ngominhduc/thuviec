@@ -15,10 +15,17 @@
         <td>{{ student.name }}</td>
         <td>{{ student.age }}</td>
         <td>{{ student.dob }}</td>
-        <td>{{ student.email }} <button class="btn btn-primary" type="button" v-on:click="deleteStudent(student.id)">delete</button> </td>
+        <td>
+          {{ student.email }}
+          <button class="btn btn-primary" type="button" >add</button>
+          <button class="btn btn-primary" type="button" >update</button>
+          <button class="btn btn-primary" type="button" v-on:click="deleteStudent(student.id)">delete</button>
+        </td>
       </tr>
       </tbody>
     </table>
+
+
   </div>
 </template>
 
@@ -35,16 +42,19 @@ import studentService from "@/services/studentService";
     methods:{
       getStudents(){
         studentService.getStudents().then((response) => {
-          console.log(response)
+          console.warn(response);
           this.students = response.data;
         });
       },
 
-      deleteStudent(id){
+       deleteStudent(id){
         studentService.deleteStudent(id);
       }
     },
     created(){
+      this.getStudents();
+    },
+    mounted() {
       this.getStudents();
     }
   }
